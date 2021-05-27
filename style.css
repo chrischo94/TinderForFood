@@ -82,5 +82,10 @@ a:not([href]):not([tabindex]) {
     text-decoration: none;
     cursor: pointer;
   } 
-
-
+  #myBtn {
+    background-color:rgb(152, 27, 27);
+    border: 1px ridge;
+    height: 70%;
+    top: 70px;
+    right: 15px;
+  }
