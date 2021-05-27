@@ -89,3 +89,9 @@ a:not([href]):not([tabindex]) {
     top: 70px;
     right: 15px;
   }
+
+  /* Carousel Styling */
+  .carousel{
+      display:flex;
+      size: 80%;
+  }
