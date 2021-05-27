@@ -1,4 +1,3 @@
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -24,4 +23,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 } 
-
