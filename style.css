@@ -95,3 +95,14 @@ a:not([href]):not([tabindex]) {
       display:flex;
       size: 80%;
   }
+
+.match{
+  display: flex;
+  gap:15px;
+  flex-direction : row;
+  justify-content: space-around;
+}
+
+  .card {
+    max-width: 30%;
+  }
