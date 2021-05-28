@@ -97,6 +97,6 @@ a:not([href]):not([tabindex]) {
   }
 
   .carousel-indicators {
-    width: 70px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
 }
