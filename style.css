@@ -105,6 +105,7 @@ a:not([href]):not([tabindex]) {
   align-items: center;
 }
 
+
   .card {
     max-width: 30%;
   }
@@ -131,23 +132,68 @@ a:not([href]):not([tabindex]) {
   .carouselBtn:hover {
     background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
     background-color: #c62d1f; 
+
   }
 
   .form-range-track-width {
       width:50%;
       border-radius: 1;
+=======
+
   }
 
-  .slider {
-    display: inline-block;
+.card {
+  max-width: 30%;
+}
+.carouselBtn {
+  width: 150px;
+  height: 40px; 
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+  background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color:#f24537 ;
+  border-radius:6px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+} 
+
+
+.carouselBtn:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f; 
+}
+.form-range-track-width {
+    width:45%;
+    border-radius: 1;
   }
 
-  #sliderDistance {
-    margin-left: 30px;
-  }
+.sliderBox{
+  position:relative;
 
-  #distanceCalc {
-    margin-left: 70px;
+}
+.rangeValue {
+  position:absolute;
+  margin-top: -7px;
+  right:0;
 
-    display: inline-block;
-  }
+
+}
+#amount {
+  padding-right: 5px;
+}
+.rangeInput{
+  margin-left: 5px;
+  margin-right: 5px;
+  position: fixed;
+  margin-top:-7;
+}
+.sliderMessage{
+  padding-right: 20px
+}
