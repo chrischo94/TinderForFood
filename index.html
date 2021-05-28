@@ -22,6 +22,12 @@
                 <input type="text" class="form-control" placeholder="Name" aria-label="profileName">
             </div>
 
+            <div class="input-group flex-nowrap">
+                <label for="customRange3" class="form-label slider">Acceptable Radius</label>
+                <input type="range" class="form-range form-range-track-width slider" min="0" max="5" step="0.5"
+                    id="sliderDistance">
+                <span class="input-group-text slider" id="distanceCalc addon-wrapping">5</span>
+
             <div class="input-group mb-3 form-control sliderBox">
                 <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label> 
                 <input type="range" id="rangeInput" class="form-range form-range-track-width" min="0" max="20" value="0"
@@ -36,16 +42,31 @@
 
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Age" aria-label="Age">
-            </div>
 
-            <div class="input-group mb-3">
-                <select class="form-control" type="text">
-                    <option selected>Types of food I like</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
             </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Age" aria-label="acceptable radius">
+        </div>
+
+
+        <div class="input-group mb-3">
+            <select class="form-control" type="text">
+                <option selected>Types of food I like</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <select class="form-control" type="text">
+                <option selected>Types of food I want to try</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
 
             <div class="input-group mb-3">
                 <select class="form-control" type="text">
@@ -55,7 +76,12 @@
                     <option value="3">Three</option>
                 </select>
             </div>
+
         </div>
+
+
+    </div>
+    </div>
     </div>
  
 
@@ -77,9 +103,9 @@
     <nav class="row navbar col-md-12 m-0 my-5">
         <a class="navbar-brand">Let's get you eating!</a>
         <form class="row form-inline col-md-12">
-            <input class="row form-control mr-sm-2 col-10" type="search" placeholder="tacos...cocktails...you decide!"
-                aria-label="Search">
-            <button class="row btn btn-dark my-2 my-sm-0 col-2" type="submit">Search</button>
+            <input class="row form-control mr-sm-2 col-10" id="formInput" type="search"
+                placeholder="tacos...cocktails...you decide!" aria-label="Search">
+            <button class="row btn btn-dark my-2 my-sm-0 col-2" id="searchBtn" type="submit">Search</button>
         </form>
     </nav>
 
@@ -92,7 +118,7 @@
             <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                 aria-label="Slide 2">Nahhh...</button>
             <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3">Look ok...</button>
+                aria-label="Slide 3">Looks ok...</button>
         </div>
         <!-- Wrapper for slides (image area) -->
         <div class="carousel-inner">
