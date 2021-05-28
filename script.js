@@ -123,3 +123,14 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
+
+//have to display = none to card
+//make the button "Match" and "nahh" work, after click btn "Match", it will show card with map and restuarant img
+//when we click "Nahh", it shows next img on carousel
+
+// create variable to button on carousel 
+var BtnMatch = document.querySelector(".BtnMatch");
+var BtnNotMatch = document.querySelector(".BtnNotMatch");
+
+
