@@ -16,24 +16,26 @@
 <body>
 
     <div id="myModal" class="modal">
-
-        <!-- Modal content -->
         <div class="modal-content col-7">
             <span class="close">&times;</span>
             <div class="input-group mb-3">
-
                 <input type="text" class="form-control" placeholder="Name" aria-label="profileName">
             </div>
 
-            <div class="input-group flex-nowrap">
-                <label for="customRange3" class="form-label slider">Acceptable Radius</label>
-                <input type="range" class="form-range form-range-track-width slider" min="0" max="5" step="0.5" id="sliderDistance">
-                <span class="input-group-text slider" id="distanceCalc addon-wrapping">5</span>
-                </div>
+            <div class="input-group mb-3 form-control sliderBox">
+                <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label> 
+                <input type="range" id="rangeInput" class="form-range form-range-track-width" min="0" max="20" value="0"
+                    oninput="amount.value=rangeInput.value">
+                <span class="input-group-text rangeValue">
+                    <output name="amount" id="amount" for="rangeInput">
+                </output>Miles Away</span>
+                    
+                </span>
+              
             </div>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Age" aria-label="acceptable radius">
+                <input type="text" class="form-control" placeholder="Age" aria-label="Age">
             </div>
 
             <div class="input-group mb-3">
@@ -53,11 +55,9 @@
                     <option value="3">Three</option>
                 </select>
             </div>
-
-      
-            </div>
         </div>
     </div>
+ 
 
 
 
@@ -87,8 +87,8 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators (three buttons at the middle of the carousel) -->
         <div class="carousel-indicators">
-            <button class="carouselBtn active" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" 
-                aria-current="true" aria-label="Slide 1">Match</button>
+            <button class="carouselBtn active" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Match</button>
             <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                 aria-label="Slide 2">Nahhh...</button>
             <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
@@ -113,7 +113,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1040&q=80" class="d-block w-100" alt="...">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1040&q=80"
+                    class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -138,7 +139,7 @@
     <!-- <div class="card"; style="width: 18rem;"> -->
 
     <div class="match">
-        <div class="card";>
+        <div class="card" ;>
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
 
@@ -151,26 +152,27 @@
                 <li class="list-group-item">A second item</li>
                 <li class="list-group-item">A third item</li>
 
-              <h5 class="card-title">Location</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Address</li>
-              <li class="list-group-item">Distance</li>
-              <li class="list-group-item">Parking</li>
-              
-
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
+                <h5 class="card-title">Location</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Address</li>
+            <li class="list-group-item">Distance</li>
+            <li class="list-group-item">Parking</li>
 
 
-        <div class="card" style="width: 18rem;">
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
 
-          <div class="card">
+
+    <div class="card" style="width: 18rem;">
+
+        <div class="card">
 
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
@@ -184,9 +186,9 @@
                 <li class="list-group-item">A second item</li>
                 <li class="list-group-item">A third item</li>
 
-              <li class="list-group-item">About us</li>
-              <li class="list-group-item">Phone</li>
-              <li class="list-group-item">Website</li>
+                <li class="list-group-item">About us</li>
+                <li class="list-group-item">Phone</li>
+                <li class="list-group-item">Website</li>
 
             </ul>
             <div class="card-body">
@@ -198,7 +200,9 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
