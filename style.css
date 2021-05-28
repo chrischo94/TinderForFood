@@ -96,6 +96,17 @@ a:not([href]):not([tabindex]) {
       size: 80%;
   }
 
+
+.match{
+  display: flex;
+  gap:15px;
+  flex-direction : row;
+  justify-content: space-around;
+}
+
+  .card {
+    max-width: 30%;
+
   .carouselBtn {
     width: 150px;
     height: 40px; 
