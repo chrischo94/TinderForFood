@@ -68,7 +68,7 @@ a:not([href]):not([tabindex]) {
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
-  /* The Close Button */
+  /*Close Button */
   .close {
     color: #aaa;
     float: right;
@@ -118,4 +118,22 @@ a:not([href]):not([tabindex]) {
   .carouselBtn:hover {
     background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
     background-color: #c62d1f; 
+
+  .form-range-track-width {
+      width:50%;
+      border-radius: 1;
+  }
+
+  .slider {
+    display: inline-block;
+  }
+
+  #sliderDistance {
+    margin-left: 30px;
+  }
+
+  #distanceCalc {
+    margin-left: 70px;
+
+    display: inline-block;
   }
