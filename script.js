@@ -125,12 +125,56 @@ window.onclick = function (event) {
 }
 
 
-//have to display = none to card
+//have to display = none to card - Lillie
 //make the button "Match" and "nahh" work, after click btn "Match", it will show card with map and restuarant img
 //when we click "Nahh", it shows next img on carousel
 
 // create variable to button on carousel 
 var BtnMatch = document.querySelector(".BtnMatch");
 var BtnNotMatch = document.querySelector(".BtnNotMatch");
+
+
+var photoSearch;
+
+// get photo on carousel - Lillie 
+function getphoto(){
+    let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
+        console.log(queryYelpPhoto)
+        $.ajax({
+          'url': queryYelpPhoto,
+          'method': 'GET',
+          'timeout': 0,
+          'headers': {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
+          },
+        }).then(function (response) {
+          console.log(response)
+        })
+        .catch(function(err) {
+            console.error(err);
+        });
+    }
+//if Match function >> Lillie
+//1. link to Card section
+//2. show Map and all detail on the 1st card
+//3. show Restaurant img and details on the 2nd card 
+
+function match () {
+  
+
+}
+
+
+
+// NotMatch function > get API for new img - Lillie
+
+// Attach event listener to Match button element
+//BtnMatch
+
+
+
+
+
 
 
