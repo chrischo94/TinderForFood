@@ -99,13 +99,16 @@ a:not([href]):not([tabindex]) {
 
 .match{
   display: flex;
-  gap:15px;
+  /* gap:10%; */
   flex-direction : row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-  .card {
-    max-width: 30%;
+.card {
+  max-width: 20%;
+  justify-content: space-around;
+  margin: 40px 50px;
+}
 
   .carouselBtn {
     width: 150px;
