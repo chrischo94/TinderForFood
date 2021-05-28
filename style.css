@@ -96,7 +96,8 @@ a:not([href]):not([tabindex]) {
       size: 80%;
   }
 
-  .carousel-indicators {
+  .carouselBtn {
     width: 150px;
     height: 40px;
-}
+    background-color:rgb(152, 27, 27);
+} 

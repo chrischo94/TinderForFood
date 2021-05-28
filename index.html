@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
@@ -28,26 +25,35 @@
             </div>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Acceptable Raidus" aria-label="acceptable radius">
-
-            </div>
-
-
-            <div class="input-group mb-3">
-
-                <input type="text" class="form-control" placeholder="Age" aria-label="age">
-
+               <div class="form-control">
+                <label for="customRange3" class="form-label">Acceptable Radius</label>
+                <input type="range" class="form-range form-range-track-width" min="0" max="5" step="0.5" id="customRange3">
+                </div>
             </div>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Types of food I am interested in"
-                    aria-label="foodInterests">
+                <input type="text" class="form-control" placeholder="Age" aria-label="acceptable radius">
             </div>
 
-            <div class="input-group">
+            <div class="input-group mb-3">
+                <select class="form-control" type="text">
+                    <option selected>Types of food I like</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
 
-                <input type="text" class="form-control" placeholder="Types of food I want to try"
-                    aria-label="food"></textarea>
+            <div class="input-group mb-3">
+                <select class="form-control" type="text">
+                    <option selected>Types of food I want to try</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+
+      
             </div>
         </div>
     </div>
@@ -80,11 +86,11 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators (three buttons at the middle of the carousel) -->
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
         <!-- Wrapper for slides (image area) -->
