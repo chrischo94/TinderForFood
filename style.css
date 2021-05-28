@@ -68,7 +68,7 @@ a:not([href]):not([tabindex]) {
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
-  /* The Close Button */
+  /*Close Button */
   .close {
     color: #aaa;
     float: right;
@@ -96,6 +96,20 @@ a:not([href]):not([tabindex]) {
       size: 80%;
   }
   .form-range-track-width {
-      width:100%;
+      width:50%;
       border-radius: 1;
+  }
+
+  .slider {
+    display: inline-block;
+  }
+
+  #sliderDistance {
+    margin-left: 30px;
+  }
+
+  #distanceCalc {
+    margin-left: 70px;
+
+    display: inline-block;
   }
