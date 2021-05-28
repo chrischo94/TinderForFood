@@ -95,3 +95,8 @@ a:not([href]):not([tabindex]) {
       display:flex;
       size: 80%;
   }
+
+  .carousel-indicators {
+    width: 70px;
+    height: 30px;
+}
