@@ -1,5 +1,7 @@
 var lat;
 var lng;
+
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -10,10 +12,13 @@ function getLocation() {
 function showPosition(position) {
   lat = position.coords.latitude;
   lng = position.coords.longitude;
+    // lat = 34.0522 (hard coded coordinates for chris to test)
+    // lng = 118.24
   console.log(lat, lng) 
   getFood();
 }
 getLocation();
+
 
 
 function getFood(){
