@@ -106,6 +106,7 @@ a:not([href]):not([tabindex]) {
 
   .card {
     max-width: 30%;
+  }
 
   .carouselBtn {
     width: 150px;
@@ -129,7 +130,8 @@ a:not([href]):not([tabindex]) {
   .carouselBtn:hover {
     background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
     background-color: #c62d1f; 
-
+  }
+  
   .form-range-track-width {
       width:50%;
       border-radius: 1;
