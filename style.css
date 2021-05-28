@@ -95,3 +95,7 @@ a:not([href]):not([tabindex]) {
       display:flex;
       size: 80%;
   }
+  .form-range-track-width {
+      width:100%;
+      border-radius: 1;
+  }
