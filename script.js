@@ -147,7 +147,7 @@ window.onclick = function (event) {
 
 
 //have to display = none to card - Lillie
-//make the button "Match" and "nahh" work, after click btn "Match", it will show card with map and restuarant img
+//make the button "Match" and "nahh" work, after click btn "Match", it will show card with restuarant detail
 //when we click "Nahh", it shows next img on carousel
 
 // create variable to button on carousel 
