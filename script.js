@@ -2,6 +2,8 @@ var lat;
 var lng;
 var searchInputVal;
 var searchBar = document.querySelector('#searchBtn');
+var matchButton = document.querySelector('#matchBtn');
+var nopeButton = document.querySelector('#nopeBtn');
 
 // Search bar submit function
 function handleSearchFormSubmit(event){
@@ -143,4 +145,58 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
+
+
+// get photo on carousel - Lillie 
+function getphoto(){
+    let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
+        console.log(queryYelpPhoto)
+        $.ajax({
+          'url': queryYelpPhoto,
+          'method': 'GET',
+          'timeout': 0,
+          'headers': {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
+          },
+        }).then(function (response) {
+          console.log(response)
+        })
+        .catch(function(err) {
+            console.error(err);
+        });
+    }
+//if Match function >> Lillie
+//1. link to Card section
+//2. show Map and all detail on the 1st card
+//3. show Restaurant img and details on the 2nd card 
+
+
+// NotMatch function > get API for new img - Lillie
+
+// Attach event listener to Match button element
+//BtnMatch
+
+
+// Match and Nope button functions
+
+function foodMatch(){
+  if (matchButton === true)
+  getElementById('#matchCard')
+  else{ (nopeButton === true)
+    console.log('Keep swiping')
+  }
+}
+
+matchButton.addEventListener('click', e => {
+  console.log(e, "It's a match!");
+})
+
+nopeButton.addEventListener('click', e =>{
+  console.log(e, "Keep swiping!");
+})
+
+
+
 
