@@ -153,29 +153,13 @@ window.onclick = function (event) {
 // create variable to button on carousel 
 var BtnMatch = document.querySelector(".BtnMatch");
 var BtnNotMatch = document.querySelector(".BtnNotMatch");
+var imgResultOne = document.querySelector("#imgResultOne");
+var imgResultTwo = document.querySelector("#imgResultTwo");
+var imgResultThree = document.querySelector("#imhResultThree");
 
-
-var photoSearch;
 
 // get photo on carousel - Lillie 
-function getphoto(){
-    let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
-        console.log(queryYelpPhoto)
-        $.ajax({
-          'url': queryYelpPhoto,
-          'method': 'GET',
-          'timeout': 0,
-          'headers': {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
-          },
-        }).then(function (response) {
-          console.log(response)
-        })
-        .catch(function(err) {
-            console.error(err);
-        });
-    }
+
 //if Match function >> Lillie
 //1. link to Card section
 //2. show Map and all detail on the 1st card
