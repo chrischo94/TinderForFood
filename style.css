@@ -111,11 +111,6 @@ a:not([href]):not([tabindex]) {
   margin: 40px 50px;
 }
 
-  /* justify-content: space-around; */
-  align-items: center;
-}
-
-
   .card {
     max-width: 30%;
   }
