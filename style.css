@@ -172,6 +172,8 @@ a:not([href]):not([tabindex]) {
   border-radius: 1;
 
 
+.sliderBox {
+  position: relative;
 }
 
 
