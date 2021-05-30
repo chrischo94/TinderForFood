@@ -170,10 +170,6 @@ a:not([href]):not([tabindex]) {
 .form-range-track-width {
   width:50%;
   border-radius: 1;
-
-
-.sliderBox {
-  position: relative;
 }
 
 
