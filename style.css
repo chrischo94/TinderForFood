@@ -110,12 +110,8 @@ a:not([href]):not([tabindex]) {
   justify-content: space-around;
   margin: 40px 50px;
 }
-
   /* justify-content: space-around; */
-  align-items: center;
-}
-
-
+ 
   .card {
     max-width: 30%;
   }
