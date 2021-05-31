@@ -2,6 +2,8 @@ var lat;
 var lng;
 var searchInputVal;
 var searchBar = document.querySelector('#searchBtn');
+var matchButton = document.querySelector('#matchBtn');
+var nopeButton = document.querySelector('#nopeBtn');
 
 // Search bar submit function
 function handleSearchFormSubmit(event){
@@ -146,30 +148,12 @@ window.onclick = function (event) {
 
 
 
-//have to display = none to card - Lillie
-//make the button "Match" and "nahh" work, after click btn "Match", it will show card with restuarant detail
-//when we click "Nahh", it shows next img on carousel
-
-// create variable to button on carousel 
-var BtnMatch = document.querySelector(".BtnMatch");
-var BtnNotMatch = document.querySelector(".BtnNotMatch");
-var imgResultOne = document.querySelector("#imgResultOne");
-var imgResultTwo = document.querySelector("#imgResultTwo");
-var imgResultThree = document.querySelector("#imhResultThree");
-
-
 // get photo on carousel - Lillie 
 
 //if Match function >> Lillie
 //1. link to Card section
 //2. show Map and all detail on the 1st card
 //3. show Restaurant img and details on the 2nd card 
-
-function match () {
-  
-
-}
-
 
 
 // NotMatch function > get API for new img - Lillie
@@ -178,7 +162,23 @@ function match () {
 //BtnMatch
 
 
+// Match and Nope button functions
 
+function foodMatch(){
+  if (matchButton === true)
+  getElementById('#matchCard')
+  else{ (nopeButton === true)
+    console.log('Keep swiping')
+  }
+}
+
+matchButton.addEventListener('click', e => {
+  console.log(e, "It's a match!");
+})
+
+nopeButton.addEventListener('click', e =>{
+  console.log(e, "Keep swiping!");
+})
 
 
 
