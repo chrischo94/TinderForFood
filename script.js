@@ -4,6 +4,12 @@ var searchInputVal;
 var searchBar = document.querySelector('#searchBtn');
 var matchButton = document.querySelector('#matchBtn');
 var nopeButton = document.querySelector('#nopeBtn');
+var imgInput = document.querySelector('#imgInput');
+var resName = document.querySelector('#resName');
+var distance = document.querySelector('#distance');
+var address = document.querySelector('#address');
+var contact = document.querySelector('#contact');
+var imgList = [];
 
 // Search bar submit function
 function handleSearchFormSubmit(event){
@@ -78,10 +84,26 @@ function getFood() {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer CvM2gOH36ZGu00rvjEGg51Nqgc01vaU8dCcxJFwq1GdUOIi9oQCwiokgJHEM_QVF6X26RbOSnpiEZCMSJnfQmVf6q0POwjjQQRoa8Xai26aWHn-xlgcMa5XDRvKvYHYx'
     },
-  }).then(function (response) {
-    console.log(response)
-  })
-    .catch(function (err) {
+  }).then(function (data) {
+    console.log(data)
+    var firstImg = data.businesses[0].image_url;
+    console.log(firstImg);
+
+    var restuarants = data.businesses;
+    console.log(restuarants);
+
+    //set the img
+    imgInput.setAttribute('src', firstImg);
+
+    //create loop for businesses list, use i=1 because want it to show from first img
+    for(var i = 1; i < data.businesses.length; i++) {
+      var buz = data.businesses[i]
+        console.log(buz);
+
+        imgList.push(buz.image_url);
+
+  }
+ }) .catch(function (err) {
       console.error(err);
     });
 }
@@ -149,24 +171,24 @@ window.onclick = function (event) {
 
 
 // get photo on carousel - Lillie 
-function getphoto(){
-    let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
-        console.log(queryYelpPhoto)
-        $.ajax({
-          'url': queryYelpPhoto,
-          'method': 'GET',
-          'timeout': 0,
-          'headers': {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
-          },
-        }).then(function (response) {
-          console.log(response)
-        })
-        .catch(function(err) {
-            console.error(err);
-        });
-    }
+// function getphoto(){
+//     let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
+//         console.log(queryYelpPhoto)
+//         $.ajax({
+//           'url': queryYelpPhoto,
+//           'method': 'GET',
+//           'timeout': 0,
+//           'headers': {
+//             'Content-Type': 'application/json',
+//             'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
+//           },
+//         }).then(function (data) {
+//           console.log(response)
+//         })
+//         .catch(function(err) {
+//             console.error(err);
+//         });
+//     }
 //if Match function >> Lillie
 //1. link to Card section
 //2. show Map and all detail on the 1st card
