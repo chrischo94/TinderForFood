@@ -4,6 +4,20 @@ var searchInputVal;
 var searchBar = document.querySelector('#searchBtn');
 var matchButton = document.querySelector('#matchBtn');
 var nopeButton = document.querySelector('#nopeBtn');
+var imgInput = document.querySelector('#imgInput');
+var resName = document.querySelector('#resName');
+var distance = document.querySelector('#distance');
+var address = document.querySelector('#address');
+var contact = document.querySelector('#contact');
+// to store list of images for the main image
+var imgList = [];
+// counter to increment the different images 
+    // when user clicks nope
+    var counter = 0
+
+    // store array of 20 restraunt data 
+    var restraunts = []
+
 
 // Search bar submit function
 function handleSearchFormSubmit(event){
@@ -23,7 +37,7 @@ function handleSearchFormSubmit(event){
 searchBar.addEventListener('click', handleSearchFormSubmit);
 
 
-
+// get location where the user is, the pop-up window will ask if the user allow to track the location
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -39,34 +53,14 @@ function showPosition(position) {
   // lat = 34.0522 (hard coded coordinates for chris to test)
   // lng = 118.24
   console.log(lat, lng)
-
  
 }
 getLocation();
 
 
 
-// function getFood() {
-//   let queryYelp = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=' + lat + '&longitude=' + lng;
-//   console.log(queryYelp)
-//   $.ajax({
-//     'url': queryYelp,
-//     'method': 'GET',
-//     'timeout': 0,
-//     'headers': {
-//       'Content-Type': 'application/json',
-//       'Authorization': 'Bearer CvM2gOH36ZGu00rvjEGg51Nqgc01vaU8dCcxJFwq1GdUOIi9oQCwiokgJHEM_QVF6X26RbOSnpiEZCMSJnfQmVf6q0POwjjQQRoa8Xai26aWHn-xlgcMa5XDRvKvYHYx'
-//     },
-//   }).then(function (response) {
-//     console.log(response)
-//   })
-//     .catch(function (err) {
-//       console.error(err);
-//     });
-// }
 
-
-
+ // 1. user enters food topic hits search 
 function getFood() {
   let queryYelp = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=' + searchInputVal + '&latitude='  + lat + '&longitude=' + lng;
   console.log(queryYelp)
@@ -78,10 +72,25 @@ function getFood() {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer CvM2gOH36ZGu00rvjEGg51Nqgc01vaU8dCcxJFwq1GdUOIi9oQCwiokgJHEM_QVF6X26RbOSnpiEZCMSJnfQmVf6q0POwjjQQRoa8Xai26aWHn-xlgcMa5XDRvKvYHYx'
     },
-  }).then(function (response) {
-    console.log(response)
-  })
-    .catch(function (err) {
+  }).then(function (data) {
+    console.log(data)
+    var firstImg = data.businesses[0].image_url;
+    console.log(firstImg);
+
+    restuarants = data.businesses;
+  
+
+    //set the img
+    imgInput.setAttribute('src', firstImg);
+
+    //create loop for businesses list, use i=1 because want it to show from first img
+    for(var i = 1; i < data.businesses.length; i++) {
+      var buz = data.businesses[i]
+        console.log(buz);
+
+        imgList.push(buz.image_url);
+  }
+ }) .catch(function (err) {
       console.error(err);
     });
 }
@@ -148,35 +157,6 @@ window.onclick = function (event) {
 
 
 
-// get photo on carousel - Lillie 
-function getphoto(){
-    let queryYelpPhoto = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&photos' + photoSearch;
-        console.log(queryYelpPhoto)
-        $.ajax({
-          'url': queryYelpPhoto,
-          'method': 'GET',
-          'timeout': 0,
-          'headers': {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer lsG_AHzvmvtH_oMWFVbHlUOjZpZL7y6lPuNQjhOKIy31Am4Wqe20bl2OXj6VRvXHmO2gYwhL5o-XiSZgmVgvY7clixxpJbeTt_v2l25bE-4a1w6ZowdAG0PvKVmxYHYx'
-          },
-        }).then(function (response) {
-          console.log(response)
-        })
-        .catch(function(err) {
-            console.error(err);
-        });
-    }
-//if Match function >> Lillie
-//1. link to Card section
-//2. show Map and all detail on the 1st card
-//3. show Restaurant img and details on the 2nd card 
-
-
-// NotMatch function > get API for new img - Lillie
-
-// Attach event listener to Match button element
-//BtnMatch
 
 
 // Match and Nope button functions
@@ -189,8 +169,32 @@ function foodMatch(){
   }
 }
 
+//event listener Match
 matchButton.addEventListener('click', e => {
   console.log(e, "It's a match!");
+
+  console.log(restuarants);
+
+  var imgSource = $('#imgInput').attr('src');
+  //var imgSource = imgInput.setAttribute('src',imgList);
+  console.log(imgSource)
+
+  for (var i = 0; i <restuarants.length; i++){
+    if(imgSource === restuarants[i].image_url){
+      console.log('I got that res data');
+
+      var chosenRest = restuarants[i];
+      console.log(chosenRest);
+
+      //set the info to display
+      $('#resName').text(chosenRest.name);
+      $('#address').text('Address: ' + chosenRest.location.display_address.join(''));
+      $('#contact').text('Phone Number: ' + chosenRest.phone);
+    }
+  }
+  
+
+
 })
 
 nopeButton.addEventListener('click', e =>{
