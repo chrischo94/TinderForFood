@@ -164,8 +164,12 @@ a:not([href]):not([tabindex]) {
   width: 50%;
   height: 50%;
   margin: auto;
-  
+}
 
+#imgInput{
+  width: auto;
+  height: 700px;
+  max-height: 700px;
 }
 
 .carouselBtnLeft {
