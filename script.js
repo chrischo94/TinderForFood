@@ -203,4 +203,19 @@ nopeButton.addEventListener('click', e =>{
 
 
 
+//user input to list
+document.getElementById("add").onclick = function() {
+  var text = document.getElementById("input").value; 
+  var li = document.createElement("li");
+  li.textContent = text;
+  document.getElementById("list").appendChild(li);
+  document.getElementById("input").value = ""; // clear the value
+}
 
+document.getElementById("add2").onclick = function() {
+  var text = document.getElementById("input2").value; 
+  var li = document.createElement("li");
+  li.textContent = text;
+  document.getElementById("list2").appendChild(li);
+  document.getElementById("input2").value = ""; // clear the value
+}
