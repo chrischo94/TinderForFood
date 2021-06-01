@@ -12,11 +12,10 @@ var contact = document.querySelector('#contact');
 // to store list of images for the main image
 var imgList = [];
 // counter to increment the different images 
-    // when user clicks nope
-    var counter = 0
-
-    // store array of 20 restraunt data 
-    var restraunts = []
+// when user clicks nope
+var counter = 0
+// store array of 20 restraunt data 
+var restraunts = []
 
 
 // Search bar submit function
@@ -60,7 +59,7 @@ getLocation();
 
 
 
- // 1. user enters food topic hits search 
+ // 1. user enters food topic hits search, get API from Yelp
 function getFood() {
   let queryYelp = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=' + searchInputVal + '&latitude='  + lat + '&longitude=' + lng;
   console.log(queryYelp)
@@ -161,13 +160,13 @@ window.onclick = function (event) {
 
 // Match and Nope button functions
 
-function foodMatch(){
-  if (matchButton === true)
-  getElementById('#matchCard')
-  else{ (nopeButton === true)
-    console.log('Keep swiping')
-  }
-}
+// function foodMatch(){
+//   if (matchButton === true)
+//   getElementById('#matchCard')
+//   else{ (nopeButton === true)
+//     console.log('Keep swiping')
+//   }
+// }
 
 //event listener Match
 matchButton.addEventListener('click', e => {
@@ -188,17 +187,19 @@ matchButton.addEventListener('click', e => {
 
       //set the info to display
       $('#resName').text(chosenRest.name);
+      //$('#distance').text(chosenRest.distance);
       $('#address').text('Address: ' + chosenRest.location.display_address.join(''));
       $('#contact').text('Phone Number: ' + chosenRest.phone);
     }
   }
-  
-
-
 })
 
 nopeButton.addEventListener('click', e =>{
   console.log(e, "Keep swiping!");
+
+  var nextImg = imgList[counter++];
+  console.log(nextImg);
+  $('#imgInput').attr('src', nextImg)
 })
 
 
