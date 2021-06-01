@@ -12,7 +12,7 @@ When we don't have time, and don't have any patience, what we need is a way to m
 10. Added profile button and created a modal for out input.
 11. Added local storage for user profile.
 12. Inserted addEventListeners to all buttons, and linked our git fetch functions.
-13. 14. CSS styling issues - visual, functional. 
+13. CSS styling issues - visual, functional. 
 
 
 ## Deployment
