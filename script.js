@@ -51,7 +51,7 @@ function showPosition(position) {
 
   // lat = 34.0522 (hard coded coordinates for chris to test)
   // lng = 118.24
-  console.log(lat, lng)
+  // console.log(lat, lng)
  
 }
 getLocation();
@@ -192,6 +192,7 @@ matchButton.addEventListener('click', e => {
       $('#contact').text('Phone Number: ' + chosenRest.phone);
     }
   }
+
 })
 
 nopeButton.addEventListener('click', e =>{
@@ -206,19 +207,19 @@ nopeButton.addEventListener('click', e =>{
 
 //user input to list
 document.getElementById("add").onclick = function() {
-  var text = document.getElementById("input").value; 
+  var text = document.getElementById("favoriteFood").value; 
   var li = document.createElement("li");
   li.textContent = text;
   document.getElementById("list").appendChild(li);
-  document.getElementById("input").value = ""; // clear the value
+  document.getElementById("favoriteFood").value = ""; // clear the value
 }
 
 document.getElementById("add2").onclick = function() {
-  var text = document.getElementById("input2").value; 
+  var text = document.getElementById("adventureFood").value; 
   var li = document.createElement("li");
   li.textContent = text;
   document.getElementById("list2").appendChild(li);
-  document.getElementById("input2").value = ""; // clear the value
+  document.getElementById("adventureFood").value = ""; // clear the value
 }
 
 $( function() {

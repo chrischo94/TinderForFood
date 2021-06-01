@@ -49,6 +49,7 @@ a:not([href]):not([tabindex]) {
 .navbar-brand {
   margin: 1%;
   padding: 0%;
+  white-space: inherit;
 }
 
 .btn {
@@ -117,6 +118,7 @@ a:not([href]):not([tabindex]) {
   top: 70px;
   right: 15px;
   color: white;
+  min-width: 30%;
 }
 
 /* Carousel Styling */
@@ -184,12 +186,7 @@ a:not([href]):not([tabindex]) {
   padding-right: 5px;
 }
 
-.rangeInput {
-  margin-left: 5px;
-  margin-right: 5px;
-  position: fixed;
 
-}
 
 .sliderMessage {
   padding-right: 20px
@@ -209,6 +206,7 @@ h5 {
   margin-top: 9px;
   outline: none;
   opacity: 0.7;
+  background-color: black;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -236,3 +234,28 @@ h5 {
   cursor: pointer;
 }
 
+
+
+
+
+/*media queries*/
+@media only screen and (max-width: 600px) {
+  label.sliderMessage {
+    display: none;
+  }
+  input.slider {
+    width: 20%;
+  }
+  #myBtn {
+    right:50px;
+  }
+  nav.navbar-brand {
+    max-width: 80%;
+  }
+  .form-inline {
+    justify-content: center;
+  }
+  #searchBtn {
+    min-width: 80%;
+  }
+}
