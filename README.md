@@ -1,32 +1,22 @@
 # TinderForFood
 
 ## Description:
-When we don't have time, and don't have any patience, what we need is a way to make the one of the hardest decisions of the day, "What should we have for dinner?"
+When we don't have time, and don't have any patience, what we need is a way to make the one of the hardest decisions of the day, "What should we have for dinner?"  This application helps resolve this issue by simplifying the process and the final decision making.  With just a few swipes left or right, we can narrow down our choices that fit our tastes in that very moment.
 
-This application helps resolve this issue by simplifying the process andthe final decision making through a seriesof prompts.
-
-
-
-
-## Process
-1. CreatedHTML., CSS, JS files
-2. Linked files
-3. Created 
-4. Formatted all applicable classes to "row" so I xcould later format to a GID layout.
-5. Linked Bootstrap, jQuery, Google fonts, 
-6. created placeholders for text & images
-7. Researched API's to obtain information on loal rests's (Yelp)
-8. Funct to get loc of user's browser
-9. created available tags to search bar for auto fucntionality
-10. profil button created dfrom a modal
-11. added local staoragefor user profile
-12. addEventListeners to buttons
-13. get fetch to import info
-14. CSS styling issues - visual, fucntional
+## Process of Development
+1. Created HTML, CSS, JS files, and linked them to out index file.
+2. Researched and linked various API's: Bootstrap, jQuery, Google Fonts.
+7. Researched API's to obtain information on local restaurants through the Yelp API.
+8. Added functions to get the location of the user's browser.
+9. Created available tags to search bar for auto-fill and streamline functionality.
+10. Added profile button and created a modal for out input.
+11. Added local storage for user profile.
+12. Inserted addEventListeners to all buttons, and linked our git fetch functions.
+13. CSS styling issues - visual, functional. 
 
 
 ## Deployment
-link to webpage
-screenshot
 
+ADD LINK TO WEBPAGE HERE
 
+SCREENSHOTS HERE
