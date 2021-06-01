@@ -139,7 +139,11 @@ a:not([href]):not([tabindex]) {
   margin: 40px 50px;
 }
 
-  
+.carousel {
+  width: 50%;
+  height: 50%;
+
+}
 
 .carouselBtn {
   width: 150px;
