@@ -219,3 +219,15 @@ document.getElementById("add2").onclick = function() {
   document.getElementById("list2").appendChild(li);
   document.getElementById("input2").value = ""; // clear the value
 }
+
+$( function() {
+  var handle = $( "#custom-handle" );
+  $( "#slider" ).slider({
+    create: function() {
+      handle.text( $( this ).slider( "value" ) );
+    },
+    slide: function( event, ui ) {
+      handle.text( ui.value );
+    }
+  });
+} );
