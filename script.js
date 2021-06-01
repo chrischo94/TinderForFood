@@ -75,14 +75,14 @@ function getFood() {
     console.log(data)
     var firstImg = data.businesses[0].image_url;
     console.log(firstImg);
-
+    
     restuarants = data.businesses;
   
 
     //set the img
     imgInput.setAttribute('src', firstImg);
 
-    //create loop for businesses list, use i=1 because want it to show from first img
+    //create loop for businesses list, use i=1 because want it to show from first img list
     for(var i = 1; i < data.businesses.length; i++) {
       var buz = data.businesses[i]
         console.log(buz);
@@ -177,7 +177,7 @@ matchButton.addEventListener('click', e => {
   var imgSource = $('#imgInput').attr('src');
   //var imgSource = imgInput.setAttribute('src',imgList);
   console.log(imgSource)
-
+  //create loop for restuarants list 
   for (var i = 0; i <restuarants.length; i++){
     if(imgSource === restuarants[i].image_url){
       console.log('I got that res data');
