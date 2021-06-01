@@ -51,7 +51,7 @@ function showPosition(position) {
 
   // lat = 34.0522 (hard coded coordinates for chris to test)
   // lng = 118.24
-  console.log(lat, lng)
+  // console.log(lat, lng)
  
 }
 getLocation();
@@ -192,6 +192,7 @@ matchButton.addEventListener('click', e => {
       $('#contact').text('Phone Number: ' + chosenRest.phone);
     }
   }
+
 })
 
 nopeButton.addEventListener('click', e =>{
@@ -205,20 +206,24 @@ nopeButton.addEventListener('click', e =>{
 
 
 //user input to list
+var faveFood = [];
+var advFood = [];
 document.getElementById("add").onclick = function() {
-  var text = document.getElementById("input").value; 
+  var text = document.getElementById("favoriteFood").value; 
   var li = document.createElement("li");
   li.textContent = text;
+  faveFood.push(text)
   document.getElementById("list").appendChild(li);
-  document.getElementById("input").value = ""; // clear the value
+  document.getElementById("favoriteFood").value = ""; // clear the value
 }
 
 document.getElementById("add2").onclick = function() {
-  var text = document.getElementById("input2").value; 
+  var text = document.getElementById("adventureFood").value; 
   var li = document.createElement("li");
   li.textContent = text;
+  advFood.push(text)
   document.getElementById("list2").appendChild(li);
-  document.getElementById("input2").value = ""; // clear the value
+  document.getElementById("adventureFood").value = ""; // clear the value
 }
 
 $( function() {
@@ -232,3 +237,24 @@ $( function() {
     }
   });
 } );
+
+var profileNameEl = document.querySelector(".profileName")
+var rangeInputEl = document.querySelector(".slider")
+var AgeEl = document.querySelector(".Age")
+
+var profileSave =[ 
+  {name: profileNameEl.value, slider: rangeInputEl.value,  years: AgeEl.value, favFood: faveFood, newFood: advFood}
+];
+var saveBtnEl = document.querySelector(".saveBtn");
+console.log(saveBtnEl)
+function setLS() {
+  localStorage.setItem("profileSave", JSON.stringify(profileSave));
+}
+saveBtnEl.addEventListener("click", function () {
+  setLS()
+  console.log("im here!")
+})
+// document.getElementById('rangeInput').addEventListener('change',function() {
+//   this.setAttribute('value',this.value);
+  // document.getElementById("amount").value=this.value
+// });
