@@ -9,13 +9,6 @@ var resName = document.querySelector('#resName');
 var distance = document.querySelector('#distance');
 var address = document.querySelector('#address');
 var contact = document.querySelector('#contact');
-var website = document.querySelector('#website');
-var price = document.querySelector('#price');
-var rating = document.querySelector('#rating');
-var matchModal = document.querySelector ('.modal-2');
-var matchClose = document.getElementById ('matchClose');
-
-
 // to store list of images for the main image
 var imgList = [];
 // counter to increment the different images 
@@ -163,12 +156,22 @@ window.onclick = function (event) {
 
 
 
+
+
+// Match and Nope button functions
+
+// function foodMatch(){
+//   if (matchButton === true)
+//   getElementById('#matchCard')
+//   else{ (nopeButton === true)
+//     console.log('Keep swiping')
+//   }
+// }
+
 //event listener Match
 matchButton.addEventListener('click', e => {
   console.log(e, "It's a match!");
-  matchModal.style.display = "block";
 
-  console.log(matchModal);
   console.log(restuarants);
 
   var imgSource = $('#imgInput').attr('src');
@@ -186,10 +189,7 @@ matchButton.addEventListener('click', e => {
       $('#resName').text(chosenRest.name);
       //$('#distance').text(chosenRest.distance);
       $('#address').text('Address: ' + chosenRest.location.display_address.join(''));
-      $('#contact').html('Phone Number: <a href="tel:' + chosenRest.phone + '">' + chosenRest.phone + '</a>');
-      $('#rating').text('Rating: ' + chosenRest.rating);
-      $('#website').html('Website: <a href="' + chosenRest.url + '">Click me! </a>');
-      $('#price').text('Price: ' + chosenRest.price);
+      $('#contact').text('Phone Number: ' + chosenRest.phone);
     }
   }
 })
@@ -232,16 +232,3 @@ $( function() {
     }
   });
 } );
-
-
-// Match modal functions 
-
-matchClose.onclick = function () {
-  matchModal.style.display = "none";
-}
-
-window.onclick = function (event) {
-  if (event.target == matchModal) {
-    matchModal.style.display = "none";
-  }
-}
