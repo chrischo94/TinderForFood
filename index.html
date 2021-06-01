@@ -14,48 +14,40 @@
 </head>
 
 <body>
-    
-    <div id="myModal" class="modal">
-        <div class="modal-content col-7">
-            <span class="close">&times;</span>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control profileName" placeholder="Name">
-            </div>
-
-            <div class="input-group mb-3 form-control sliderBox">
-                <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label>
-                <input type="range" id="rangeInput" class="form-range slider" min="0" max="20" value="0" step="1"
-                    oninput="amount.value=rangeInput.value">
-                <span class="input-group-text rangeValue">
-                    <output name="amount" id="amount" for="rangeInput">
-                    </output>Miles Away</span>
-
-                </span>
-
-            </div>
-
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control Age" placeholder="Age">
-            </div>
-
-
-            <div class="input-group mb-3">
-                <input type='text' id='favoriteFood' placeholder="Food I like" />
-                <input type='button' value='Established &#128526;' id='add' />
-                <ul id='list'>
-                </ul>
-            </div>
-        
-            <div class="input-group mb-3">
-                <input type='text' id='adventureFood' placeholder="Food I want to try" />
-                <input type='button' value='Adventure!! &#127922;' id='add2' />
-                <ul id='list2'>
-                </ul>
-            </div>
-            <button class="saveBtn">Save</button> 
+  <!-- first Modal-->
+  <div id="myModal" class="modal">
+    <div class="modal-content col-7">
+        <span class="close">&times;</span>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control profileName" placeholder="Name">
         </div>
+        <div class="input-group mb-3 form-control sliderBox">
+            <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label>
+            <input type="range" id="rangeInput" class="form-range slider" min="0" max="20" value="0" step="1"
+                oninput="amount.value=rangeInput.value">
+            <span class="input-group-text rangeValue">
+                <output name="amount" id="amount" for="rangeInput">
+                </output>Miles Away</span>
+            </span>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control Age" placeholder="Age">
+        </div>
+        <div class="input-group mb-3">
+            <input type='text' id='favoriteFood' placeholder="Food I like" />
+            <input type='button' value='Established &#128526;' id='add' />
+            <ul id='list'>
+            </ul>
+        </div>
+        <div class="input-group mb-3">
+            <input type='text' id='adventureFood' placeholder="Food I want to try" />
+            <input type='button' value='Adventure!! &#127922;' id='add2' />
+            <ul id='list2'>
+            </ul>
+        </div>
+        <button class="saveBtn">Save</button> 
     </div>
+</div>
 
 
 
@@ -77,80 +69,55 @@
         <form class="row form-inline col-md-12">
             <input class="row form-control mr-sm-2 col-10" id="formInput" type="search"
                 placeholder="tacos...cocktails...you decide!" aria-label="Search">
-            <button class="row btn btn-dark my-2 my-sm-0 col-2" id="searchBtn" type="submit">Search</button>
+           <button class="row btn btn-dark my-2 my-sm-0 col-2" id="searchBtn" type="submit">Search</button>
         </form>
     </nav>
 
     <!--Carousel-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators (three buttons at the middle of the carousel) -->
-        <div class="carousel-indicators">
-            <button class="carouselBtn active" id="matchBtn" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Match</button>
-            <button class="carouselBtn" id="nopeBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2">Nope</button>
-            <button class="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3">Looks ok...</button>
-        </div>
-        <!-- Wrapper for slides (image area) -->
+        <!-- getFood img area -->
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active img-fluid">
                 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                id="imgInput" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-                    class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1040&q=80"
-                    class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
+                id="imgInput" alt="...">
+            </div>  
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        <!-- Nope button on the left side-->
+        <button class="carousel-control-prev carouselBtnLeft" id="nopeBtn" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Nope</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        <!-- Match button on the right side-->
+        <button class="carousel-control-next carouselBtnRight" id="matchBtn" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Match</span>
         </button>
     </div>
 
-    <!--Match cards-->
-    <div class="match">
 
-
-        <div class="card" ;>
-            <img src="images/tacocat-background.png" class="card-img-top" alt="tacocat">
-            <div class="card-body">
-
-                <h5 class="card-title" id="resName">Tacocat Restaurant</h5>
-                <p class="card-text"> </p>
+    <!--Match Modal-->
+    <div class="modal-2" id="matchModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">It's a match!</h5>
             </div>
-            <div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="distance">Distance:</li>
-                    <li class="list-group-item" id="address">Address:</li>
-                    <li class="list-group-item" id="contact">Contact</li>
-                </ul>
+            <div class="modal-body">
+              <h2 id="resName"></h2>
+              <p id="address">Address:</p>
+              <p id="website">Website:</p>
+              <p id="contact">Contact:</p>
+              <p id="rating">Rating:</p>
+              <p id="price">Price:</p>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="matchClose">Close</button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
