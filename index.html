@@ -23,8 +23,8 @@
             </div>
 
             <div class="input-group mb-3 form-control sliderBox">
-                <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label>
-                <input type="range" id="rangeInput" class="form-range form-range-track-width" min="0" max="20" value="0"
+                <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius (Slide the Taco!)</label>
+                <input type="range" id="rangeInput" class="form-range slider" min="0" max="20" value="0"
                     oninput="amount.value=rangeInput.value">
                 <span class="input-group-text rangeValue">
                     <output name="amount" id="amount" for="rangeInput">
@@ -41,21 +41,17 @@
 
 
             <div class="input-group mb-3">
-                <select class="form-control" type="text">
-                    <option selected>Types of food I like</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+                <input type='text' id='input' placeholder="Food I like" />
+                <input type='button' value='Established &#128526;' id='add' />
+                <ul id='list'>
+                </ul>
             </div>
-
+        
             <div class="input-group mb-3">
-                <select class="form-control" type="text">
-                    <option selected>Types of food I want to try</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+                <input type='text' id='input2' placeholder="Food I want to try" />
+                <input type='button' value='Adventure!! &#127922;' id='add2' />
+                <ul id='list2'>
+                </ul>
             </div>
         </div>
     </div>
