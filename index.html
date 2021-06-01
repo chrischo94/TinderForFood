@@ -84,43 +84,45 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <!-- Wrapper for slides (image area) -->
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active img-fluid">
                 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                 id="imgInput" class="d-block w-100" alt="...">
             </div>  
         </div>
-        <button class="carousel-control-prev" id="nopeBtn" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-prev carouselBtnLeft" id="nopeBtn" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Nope</span>
         </button>
-        <button class="carousel-control-next" id="matchBtn" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-next carouselBtnRight" id="matchBtn" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Match</span>
         </button>
     </div>
 
-    <!--Match cards-->
-    <div class="match">
 
-
-        <div class="card" ;>
-            <img src="images/tacocat-background.png" class="card-img-top" alt="tacocat">
-            <div class="card-body">
-
-                <h5 class="card-title" id="resName">Tacocat Restaurant</h5>
-                <p class="card-text"> </p>
+    <!--Match Modal-->
+    <div class="modal-2" id="matchModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">It's a match!</h5>
             </div>
-            <div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="distance">Distance:</li>
-                    <li class="list-group-item" id="address">Address:</li>
-                    <li class="list-group-item" id="contact">Contact</li>
-                </ul>
+            <div class="modal-body">
+              <h2 id="resName"></h2>
+              <p id="address">Address:</p>
+              <p id="website">Website:</p>
+              <p id="contact">Contact:</p>
+              <p id="rating">Rating:</p>
+              <p id="price">Price:</p>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="matchClose">Close</button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
