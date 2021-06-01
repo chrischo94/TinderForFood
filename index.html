@@ -19,12 +19,12 @@
         <div class="modal-content col-7">
             <span class="close">&times;</span>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Name" aria-label="profileName">
+                <input type="text" class="form-control profileName" placeholder="Name">
             </div>
 
             <div class="input-group mb-3 form-control sliderBox">
                 <label for="rangeInput" id="acceptableRadius" class="form-label sliderMessage">Acceptable Radius</label>
-                <input type="range" id="rangeInput" class="form-range slider" min="0" max="20" value="0"
+                <input type="range" id="rangeInput" class="form-range slider" min="0" max="20" value="0" step="1"
                     oninput="amount.value=rangeInput.value">
                 <span class="input-group-text rangeValue">
                     <output name="amount" id="amount" for="rangeInput">
@@ -36,7 +36,7 @@
 
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Age" aria-label="Age">
+                <input type="text" class="form-control Age" placeholder="Age">
             </div>
 
 
@@ -53,6 +53,7 @@
                 <ul id='list2'>
                 </ul>
             </div>
+            <button class="saveBtn">Save</button> 
         </div>
     </div>
 
