@@ -132,26 +132,28 @@
         </button>
     </div>
 
-    <!--Match cards-->
-    <div class="match">
 
-
-        <div class="card" ;>
-            <img src="images/tacocat-background.png" class="card-img-top" alt="tacocat">
-            <div class="card-body">
-
-                <h5 class="card-title" id="resName">Tacocat Restaurant</h5>
-                <p class="card-text"> </p>
+    <!--Match Modal-->
+    <div class="modal-2" id="matchModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">It's a match!</h5>
             </div>
-            <div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="distance">Distance:</li>
-                    <li class="list-group-item" id="address">Address:</li>
-                    <li class="list-group-item" id="contact">Contact</li>
-                </ul>
+            <div class="modal-body">
+              <h2 id="resName"></h2>
+              <p id="address">Address:</p>
+              <p id="website">Website:</p>
+              <p id="contact">Contact:</p>
+              <p id="rating">Rating:</p>
+              <p id="price">Price:</p>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="matchClose">Close</button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
