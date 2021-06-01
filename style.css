@@ -49,14 +49,7 @@ a:not([href]):not([tabindex]) {
 .navbar-brand {
   margin: 1%;
   padding: 0%;
-  white-space: inherit;
 }
-
-.searchForm {
-  font-size: 100;
-}
-
-
 
 .btn {
   margin: 0%;
@@ -89,6 +82,27 @@ a:not([href]):not([tabindex]) {
   /* Black w/ opacity */
 }
 
+
+.modal-2 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 /* Modal Content/Box */
 
 .modal-content {
@@ -124,7 +138,6 @@ a:not([href]):not([tabindex]) {
   top: 70px;
   right: 15px;
   color: white;
-  min-width: 30%;
 }
 
 /* Carousel Styling */
@@ -147,37 +160,34 @@ a:not([href]):not([tabindex]) {
   margin: 40px 50px;
 }
 
-  
-
-.carouselBtn {
-  width: 150px;
-  height: 40px;
-  box-shadow: inset 0px 1px 0px 0px #f5978e;
-  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-  background-color: #f24537;
-  border-radius: 6px;
-  border: 1px solid #d02718;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #810e05;
+.carousel {
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 
-.carouselBtn:hover {
+#imgInput{
+  width: auto;
+  height: 700px;
+  max-height: 700px;
+}
+
+.carouselBtnLeft {
+  color: #c62d1f;
+}
+
+.carouselBtnLeft:hover {
   background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
   background-color: #c62d1f;
 }
 
+.carouselBtnRight {
+  color: #228B22;
+}
 
-
-.form-range-track-width {
-  width:50%;
-  border-radius: 1;
+.carouselBtnRight:hover {
+  background: linear-gradient(to bottom, #32CD32 5%, #ADFF2F 100%);
+  background-color: #32CD32;
 }
 
 
@@ -195,6 +205,12 @@ a:not([href]):not([tabindex]) {
   padding-right: 5px;
 }
 
+.rangeInput {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: fixed;
+
+}
 
 .sliderMessage {
   padding-right: 20px
@@ -214,7 +230,6 @@ h5 {
   margin-top: 9px;
   outline: none;
   opacity: 0.7;
-  background-color: black;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -242,28 +257,3 @@ h5 {
   cursor: pointer;
 }
 
-
-
-
-
-/*media queries*/
-@media only screen and (max-width: 600px) {
-  label.sliderMessage {
-    display: none;
-  }
-  input.slider {
-    width: 20%;
-  }
-  #myBtn {
-    right:50px;
-  }
-  nav.navbar-brand {
-    max-width: 80%;
-  }
-  .form-inline {
-    justify-content: center;
-  }
-  #searchBtn {
-    min-width: 80%;
-  }
-}
