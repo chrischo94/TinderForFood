@@ -198,6 +198,9 @@ a:not([href]):not([tabindex]) {
 h5 {
   text-align: center;
 }
+
+
+
 .slider {
   -webkit-appearance: none;
   width: 30%;
@@ -232,3 +235,4 @@ h5 {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
