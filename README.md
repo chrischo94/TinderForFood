@@ -1,7 +1,7 @@
 # TinderForFood
 
 ## Description:
-When we don't have time, and don't have any patience, what we need is a way to make the one of the hardest decisions of the day, "What should we have for dinner?"  This application helps resolve this issue by simplifying the process and the final decision making.  With just a few swipes left or right, we can narrow down our choices that fit our tastes in that very moment.
+There are days when we have limited time and even less patience, and the last decision you want to make is the dreaded, "What should we have for dinner?"  This application helps resolve this issue by simplifying the process and the final decision making.  With just a few swipes left or right, we can narrow down our choices that fit our tastes in that very moment.
 
 ## Process of Development
 1. Created HTML, CSS, JS files, and linked them to out index file.
@@ -17,6 +17,8 @@ When we don't have time, and don't have any patience, what we need is a way to m
 
 ## Deployment
 
-ADD LINK TO WEBPAGE HERE
+https://chrischo94.github.io/TinderForFood/ <br>
+https://github.com/chrischo94/TinderForFood.git
 
-SCREENSHOTS HERE
+![Food Tinder allows you to select the types of food you may be interested in eating that night.](images/READMEimages/image2z.jpg)
+![Food Tinder allows you to select the types of food you may be interested in eating that night.](images/READMEimages/image3z.jpg)
