@@ -20,6 +20,5 @@ There are days when we have limited time and even less patience, and the last de
 https://chrischo94.github.io/TinderForFood/ <br>
 https://github.com/chrischo94/TinderForFood.git
 
-![Food Tinder allows you to select the types of food you may be interested in eating that night.](images/READMEimages/taco.gif)
 ![Food Tinder allows you to select the types of food you may be interested in eating that night.](images/READMEimages/image2z.jpg)
 ![Food Tinder allows you to select the types of food you may be interested in eating that night.](images/READMEimages/image3z.jpg)
